@@ -1,0 +1,52 @@
+<Front>:
+    MDFloatLayout:
+        MDGridLayout:
+            pos_hint: {'center_x': .5, 'center_y': .99}
+            size_hint_x: 1
+            size_hint_y: .04
+            cols: 4
+            md_bg_color: "#ff0000"
+            MDLabel:
+                halign: 'center'
+                valign: 'middle'
+                text: 'col1'
+            MDLabel:
+                halign: 'center'
+                valign: 'middle'
+                text: 'col2'
+            MDLabel:
+                halign: 'center'
+                valign: 'middle'
+                text: 'col3'
+            MDLabel:
+                halign: 'center'
+                valign: 'middle'
+                text: 'col4'
+        MDGridLayout:
+            pos_hint: {'center_x': .5, 'center_y': .1}
+            size_hint_x: 1
+            size_hint_y: .3
+            cols: 3
+            md_bg_color: "#ff0000"
+            MDFloatLayout:
+                MDRoundFlatButton:
+                    halign: 'center'
+                    text: 'Cadastrar'
+                    pos_hint: {'center_x': .5, 'center_y': .5}
+                    size_hint_x: .7
+                    size_hint_y: .3
+            MDFloatLayout:
+                MDRoundFlatButton:
+                    halign: 'center'
+                    text: 'Remover'
+                    pos_hint: {'center_x': .5, 'center_y': .5}
+                    size_hint_x: .7
+                    size_hint_y: .3
+            MDFloatLayout:
+                MDRoundFlatButton:
+                    halign: 'center'
+                    text: 'Teclado'
+                    on_release: app.muda_tela()
+                    pos_hint: {'center_x': .5, 'center_y': .5}
+                    size_hint_x: .7
+                    size_hint_y: .3

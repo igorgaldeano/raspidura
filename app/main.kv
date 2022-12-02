@@ -1,52 +1,129 @@
-<Front>:
+MDBoxLayout:
+    orientation: 'vertical'
     MDFloatLayout:
+        id: display
+        size_hint: [1, .000001]
+        md_bg_color: app.theme_cls.colors['Red']['200']
+    MDGridLayout:
+        pos_hint: {'center_x': .5, 'center_y': .99}
+        size_hint_x: 1
+        size_hint_y: .04
+        cols: 4
+        MDLabel:
+            halign: 'center'
+            valign: 'middle'
+            text: 'col1'
+        MDLabel:
+            halign: 'center'
+            valign: 'middle'
+            text: 'col2'
+        MDLabel:
+            halign: 'center'
+            valign: 'middle'
+            text: 'col3'
+        MDLabel:
+            halign: 'center'
+            valign: 'middle'
+            text: 'col4'
+    MDGridLayout:
+        cols: 2
+        minimum_width: .5
         MDGridLayout:
-            pos_hint: {'center_x': .5, 'center_y': .99}
-            size_hint_x: 1
-            size_hint_y: .04
-            cols: 4
-            md_bg_color: "#ff0000"
-            MDLabel:
-                halign: 'center'
-                valign: 'middle'
-                text: 'col1'
-            MDLabel:
-                halign: 'center'
-                valign: 'middle'
-                text: 'col2'
-            MDLabel:
-                halign: 'center'
-                valign: 'middle'
-                text: 'col3'
-            MDLabel:
-                halign: 'center'
-                valign: 'middle'
-                text: 'col4'
+            rows: 2
+            MDAnchorLayout:
+                id: camera
+                anchor_x: "left"
+                anchor_y: "top"
+                size_hint_y: 2
+            MDFloatLayout:
+                MDRoundFlatButton:
+                    pos_hint: {"center_y": .7, "center_x": .5}
+                    size_hint: [.3, .25]
+                    id: senha
+                    md_bg_color: app.theme_cls.colors['Red']['200']
+                    text: ""
+                MDRoundFlatButton:
+                    pos_hint: {"center_y": .3, "center_x": .3}
+                    size_hint: [.3, .4]
+                    text: "Cadastrar usuário"
+                    on_release: app.teclado('cadastro')
+                MDRoundFlatButton:
+                    pos_hint: {"center_y": .3, "center_x": .7}
+                    size_hint: [.3, .4]
+                    text: "Apagar usuário"
+                    on_release: app.teclado('remover')
         MDGridLayout:
-            pos_hint: {'center_x': .5, 'center_y': .1}
-            size_hint_x: 1
-            size_hint_y: .3
             cols: 3
-            md_bg_color: "#ff0000"
+            rows: 4
             MDFloatLayout:
                 MDRoundFlatButton:
-                    halign: 'center'
-                    text: 'Cadastrar'
-                    pos_hint: {'center_x': .5, 'center_y': .5}
-                    size_hint_x: .7
-                    size_hint_y: .3
+                    text: "1"
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                    size_hint: [.7, .4]
+                    on_release: app.matriz(1)
             MDFloatLayout:
                 MDRoundFlatButton:
-                    halign: 'center'
-                    text: 'Remover'
-                    pos_hint: {'center_x': .5, 'center_y': .5}
-                    size_hint_x: .7
-                    size_hint_y: .3
+                    text: "2"
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                    size_hint: [.7, .4]
+                    on_release: app.matriz(2)
             MDFloatLayout:
                 MDRoundFlatButton:
-                    halign: 'center'
-                    text: 'Teclado'
-                    on_release: app.muda_tela()
-                    pos_hint: {'center_x': .5, 'center_y': .5}
-                    size_hint_x: .7
-                    size_hint_y: .3
+                    text: "3"
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                    size_hint: [.7, .4]
+                    on_release: app.matriz(3)
+            MDFloatLayout:
+                MDRoundFlatButton:
+                    text: "4"
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                    size_hint: [.7, .4]
+                    on_release: app.matriz(4)
+            MDFloatLayout:
+                MDRoundFlatButton:
+                    text: "5"
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                    size_hint: [.7, .4]
+                    on_release: app.matriz(5)
+            MDFloatLayout:
+                MDRoundFlatButton:
+                    text: "6"
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                    size_hint: [.7, .4]
+                    on_release: app.matriz(6)
+            MDFloatLayout:
+                MDRoundFlatButton:
+                    text: "7"
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                    size_hint: [.7, .4]
+                    on_release: app.matriz(7)
+            MDFloatLayout:
+                MDRoundFlatButton:
+                    text: "8"
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                    size_hint: [.7, .4]
+                    on_release: app.matriz(8)
+            MDFloatLayout:
+                MDRoundFlatButton:
+                    text: "9"
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                    size_hint: [.7, .4]
+                    on_release: app.matriz(9)
+            MDFloatLayout:
+                MDRoundFlatButton:
+                    text: "Del"
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                    size_hint: [.7, .4]
+                    on_release: app.delete()
+            MDFloatLayout:
+                MDRoundFlatButton:
+                    text: "0"
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                    size_hint: [.7, .4]
+                    on_release: app.matriz(0)
+            MDFloatLayout:
+                MDRoundFlatButton:
+                    text: "Enter"
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                    size_hint: [.7, .4]
+                    on_release: app.abre()
